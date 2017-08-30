@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Test drag and drop</title>
+	<link rel="stylesheet" type="text/css" href="dnd1.css">
+	<script src="dnd1.js"></script>
+</head>
+<body>
+  <h1>
+  	Drag and drop lesson 1:
+  </h1>
+  <div id="columns">
+  <div class="column" draggable="true"><header>A</header></div>
+  <div class="column" draggable="true"><header>B</header></div>
+  <div class="column" draggable="true"><header>C</header></div>
+</div>
+<script>
+(function() {
+var cols = document.querySelectorAll('#columns .column');
+[].forEach.call(cols, function(col) {
+  col.addEventListener('dragstart', handleDragStart, false);
+  col.addEventListener('dragenter', handleDragEnter, false)
+  col.addEventListener('dragover', handleDragOver, false);
+  col.addEventListener('dragleave', handleDragLeave, false);
+  col.addEventListener('drop', handleDrop, false);
+  col.addEventListener('dragend', handleDragEnd, false);
+});
+})();
+</script>
+</body>
+</html>
