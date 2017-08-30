@@ -1,7 +1,6 @@
 
 function startDrag (e){
-	e.dataTransfer.setData('imgCode', this.outerHTML);
-	e.dataTransfer.setData('containerId', this.parentElement.id);
+	e.dataTransfer.setData('text', this.outerHTML +"|"+this.parentElement.id);
 
 }
 
@@ -10,7 +9,7 @@ function dragEntered(e){
 	this.style.backgroundColor = "#CDCDCD"; 
 	this.style.opacity = "0.3"; 
 }
-function dragLeave(){
+function dragLeave(e){
 	e.preventDefault();
 	this.style.backgroundColor = ""; 
 	this.style.opacity = "1"; 
@@ -35,12 +34,13 @@ function dropped(e){
 	e.preventDefault();
 	var dropSection = null;
 	var sourceSection = null;
-	sourceSection = document.getElementById(e.dataTransfer.getData('containerId'));
+	var dataTransfer = e.dataTransfer.getData('text').split("|");
+	sourceSection = document.getElementById(dataTransfer[1]);
 	dropSection = document.getElementById(e.currentTarget.id);
 
 
 	var temp = dropSection.innerHTML;
-	dropSection.innerHTML = e.dataTransfer.getData('imgCode');
+	dropSection.innerHTML = dataTransfer[0];
 	sourceSection.innerHTML = temp;
     
     dropSection.removeEventListener("dragenter", dragEntered,false);
