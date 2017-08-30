@@ -11,6 +11,7 @@ function dragEntered(e){
 	this.style.opacity = "0.3"; 
 }
 function dragLeave(){
+	e.preventDefault();
 	this.style.backgroundColor = ""; 
 	this.style.opacity = "1"; 
 }
