@@ -7,16 +7,21 @@ function startDrag (e){
 
 function dragEntered(e){
 	e.preventDefault();
-	this.style.backgroundColor = "#EFEFEF"; 
-	this.style.opacity = "0.5"; 
+	this.style.backgroundColor = "#CDCDCD"; 
+	this.style.opacity = "0.3"; 
 }
-
+function dragLeave(){
+	this.style.backgroundColor = ""; 
+	this.style.opacity = "1"; 
+}
 function endDrag(e){
 	e.preventDefault();
 		var leftbox =document.getElementById("leftbox");
 	var rightbox =document.getElementById("rightbox");
 	leftbox.style.backgroundColor = ""; 
+	leftbox.style.opacity = "1"; 
 	rightbox.style.backgroundColor = ""; 
+	rightbox.style.opacity = "1"; 
 }
 
 
@@ -39,9 +44,11 @@ function dropped(e){
     
     dropSection.removeEventListener("dragenter", dragEntered,false);
 	dropSection.removeEventListener("dragover",dragOvered,false);
+	dropSection.addEventListener("dragleave", dragLeave,false);
 	dropSection.removeEventListener("drop",dropped,false);
 
 	sourceSection.addEventListener("dragenter", dragEntered,false);
+	sourceSection.addEventListener("dragleave", dragLeave,false);
 	sourceSection.addEventListener("dragover",dragOvered,false);
 	sourceSection.addEventListener("drop",dropped,false);
 	
@@ -58,6 +65,7 @@ function start(){
 	dragImg.addEventListener("dragstart", startDrag, false);
 	dragImg.addEventListener("dragend", endDrag,false);
 	leftbox.addEventListener("dragenter", dragEntered,false);
+	leftbox.addEventListener("dragleave", dragLeave,false);
 	leftbox.addEventListener("dragover",dragOvered,false);
 	leftbox.addEventListener("drop",dropped,false);
 }
