@@ -1,0 +1,16 @@
+* {
+box-sizing: border-box;
+}
+.grid div{
+	border:1px solid rgb(0,95,107);
+	border-radius: 1px;
+	background-color: rgba(0,95,107,0.8);
+	padding:0.2em;
+	color:#ffffff;
+	font-size: 120%
+}
+.grid div:nth-child(even) 
+{
+	border:1px solid rgb(41,183,202);
+	background-color: rgba(41,183,202,0.8);
+}

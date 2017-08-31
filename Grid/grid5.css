@@ -1,0 +1,16 @@
+.grid{
+	display:grid;
+	grid-template-columns: minmax(200px, 500px) 1fr 1fr 1fr;
+	grid-template-rows: 1fr 2fr 3fr;
+	grid-gap: 10px;
+	grid-auto-flow:column;
+}
+.grid div{
+	order:10;
+}
+.grid div:nth-child(2){
+order: 1;
+}
+.grid div:nth-child(5){
+order: 5;
+}
