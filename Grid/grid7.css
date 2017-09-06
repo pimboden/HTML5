@@ -1,0 +1,38 @@
+
+#boxes{
+	list-style: none;
+	margin:0;
+	padding:0;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
+	grid-gap:2px;
+	grid-auto-rows: minmax(80px,auto);
+	grid-auto-flow:dense;
+}
+#boxes li{
+	border-radius: 1em;
+	padding:20px 10px;
+	text-align: center;
+}
+
+.special{
+  grid-row:3;
+  grid-column:1 /-1;
+
+}
+.special2{
+  grid-row:5;
+  grid-column:1 /-1;
+
+}
+.span2{
+	grid-column-end: span 2;
+	grid-row-end: span 2;
+}
+.span3{
+	grid-column-end: span 3;
+	grid-row-end: span 3;
+}
+.tall4{
+	grid-row-end: span 4;
+}

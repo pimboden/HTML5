@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Test Grids</title>
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
+	<link rel="stylesheet" type="text/css" href="/grid/grid.css">
+	<link rel="stylesheet" type="text/css" href="/grid/grid7.css?v1.1">
+</head>
+<body>
+	<h1>
+		Auto-placement and packing modes
+	</h1>
+	<p>Sample from <a href="https://gridbyexample.com/video/series-auto-placement-span/" target="_blank">Auto-placement and packing modes</a></p>
+<p>rgrid-auto-flow:
+<select onchange="changeFlow(this)">
+	<option value="dense">dense</option>
+	<option value="row">row</option>
+	<option value="column">column</option>
+	<option value="row dense">row dense</option>
+	<option value="column dense">column dense</option>
+</select>
+</p>
+<!--//ul.colors>li[style="background-color:#FFFFFF;color:black"].white*100-->
+
+<ul id="boxes">
+	<li style="background-color:#FFFFFF;color:black">1</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">2</li>
+	<li style="background-color:#FFFFFF;color:black" class="special2">3 special2</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">4</li>
+	<li style="background-color:#FFFFFF;color:black">5</li>
+	<li style="background-color:#FFFFFF;color:black">6</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">7</li>
+	<li style="background-color:#FFFFFF;color:black">8</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">9</li>
+	<li style="background-color:#FFFFFF;color:black">10</li>
+	<li style="background-color:#FFFFFF;color:black">11</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">12</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">13</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">14</li>
+	<li style="background-color:#FFFFFF;color:black">15</li>
+	<li style="background-color:#FFFFFF;color:black" class="special">16 special</li>
+	<li style="background-color:#FFFFFF;color:black">17</li>
+	<li style="background-color:#FFFFFF;color:black">18</li>
+	<li style="background-color:#FFFFFF;color:black">19</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">20</li>
+	<li style="background-color:#FFFFFF;color:black">21</li>
+	<li style="background-color:#FFFFFF;color:black">22</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">23</li>
+	<li style="background-color:#FFFFFF;color:black">24</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">25</li>
+	<li style="background-color:#FFFFFF;color:black">26</li>
+	<li style="background-color:#FFFFFF;color:black">27</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">28</li>
+	<li style="background-color:#FFFFFF;color:black">29</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">30</li>
+	<li style="background-color:#FFFFFF;color:black">31</li>
+	<li style="background-color:#FFFFFF;color:black">32</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">33</li>
+	<li style="background-color:#FFFFFF;color:black">34</li>
+	<li style="background-color:#FFFFFF;color:black">35</li>
+	<li style="background-color:#FFFFFF;color:black">36</li>
+	<li style="background-color:#FFFFFF;color:black">37</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">38</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">39</li>
+	<li style="background-color:#FFFFFF;color:black">40</li>
+	<li style="background-color:#FFFFFF;color:black">41</li>
+	<li style="background-color:#FFFFFF;color:black">42</li>
+	<li style="background-color:#FFFFFF;color:black">43</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">44</li>
+	<li style="background-color:#FFFFFF;color:black">45</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">46</li>
+	<li style="background-color:#FFFFFF;color:black">47</li>
+	<li style="background-color:#FFFFFF;color:black">48</li>
+	<li style="background-color:#FFFFFF;color:black">49</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">50</li>
+	<li style="background-color:#FFFFFF;color:black">51</li>
+	<li style="background-color:#FFFFFF;color:black">52</li>
+	<li style="background-color:#FFFFFF;color:black">53</li>
+	<li style="background-color:#FFFFFF;color:black">54</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">55</li>
+	<li style="background-color:#FFFFFF;color:black">56</li>
+	<li style="background-color:#FFFFFF;color:black">57</li>
+	<li style="background-color:#FFFFFF;color:black">58</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">59</li>
+	<li style="background-color:#FFFFFF;color:black">60</li>
+	<li style="background-color:#FFFFFF;color:black">61</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">62</li>
+	<li style="background-color:#FFFFFF;color:black">63</li>
+	<li style="background-color:#FFFFFF;color:black">64</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">65</li>
+	<li style="background-color:#FFFFFF;color:black">66</li>
+	<li style="background-color:#FFFFFF;color:black">67</li>
+	<li style="background-color:#FFFFFF;color:black">68</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">69</li>
+	<li style="background-color:#FFFFFF;color:black">70</li>
+	<li style="background-color:#FFFFFF;color:black">71</li>
+	<li style="background-color:#FFFFFF;color:black">72</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">73</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">74</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">75</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">76</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">77</li>
+	<li style="background-color:#FFFFFF;color:black">78</li>
+	<li style="background-color:#FFFFFF;color:black">79</li>
+	<li style="background-color:#FFFFFF;color:black">80</li>
+	<li style="background-color:#FFFFFF;color:black">81</li>
+	<li style="background-color:#FFFFFF;color:black">82</li>
+	<li style="background-color:#FFFFFF;color:black">83</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">84</li>
+	<li style="background-color:#FFFFFF;color:black">85</li>
+	<li style="background-color:#FFFFFF;color:black">86</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">87</li>
+	<li style="background-color:#FFFFFF;color:black">88</li>
+	<li style="background-color:#FFFFFF;color:black">89</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">90</li>
+	<li style="background-color:#FFFFFF;color:black">91</li>
+	<li style="background-color:#FFFFFF;color:black">92</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3>93</li>
+	<li style="background-color:#FFFFFF;color:black">94</li>
+	<li style="background-color:#FFFFFF;color:black" class="span2">95</li>
+	<li style="background-color:#FFFFFF;color:black">96</li>
+	<li style="background-color:#FFFFFF;color:black" class="tall4">97</li>
+	<li style="background-color:#FFFFFF;color:black">98</li>
+	<li style="background-color:#FFFFFF;color:black" class="span3">99</li>
+	<li style="background-color:#FFFFFF;color:black">100</li>
+</ul>
+<script>
+	function changeFlow(select){
+		boxes = document.getElementById('boxes');
+		boxes.style.gridAutoFlow = select.value;
+	}
+
+</script>
+</body>
+</html>
